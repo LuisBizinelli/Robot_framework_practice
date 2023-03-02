@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230302 13:05:59.236" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes" source="c:\Users\luis.r.bizinelli\Documents\Projetos_publicos\formação Robot\Robot_framework_practice\WebTest\tests\amazon_testes.robot">
+<test id="s1-t1" name="Caso de Teste 02 - Pesquisa de um Produto" line="20">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230302 13:05:59.599" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230302 13:05:59.599" endtime="20230302 13:06:01.137"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230302 13:06:01.137" endtime="20230302 13:06:01.261"/>
+</kw>
+<status status="PASS" starttime="20230302 13:05:59.598" endtime="20230302 13:06:01.261"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230302 13:06:01.265" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20230302 13:06:01.264" endtime="20230302 13:06:03.053"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230302 13:06:03.054" endtime="20230302 13:06:03.157"/>
+</kw>
+<status status="PASS" starttime="20230302 13:06:01.262" endtime="20230302 13:06:03.158"/>
+</kw>
+<kw name="Digitar o nome de produto &quot;playstation 5&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${TEXTO_PESQUISA}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_PESQUISAR}</arg>
+<arg>${TEXTO_PESQUISA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230302 13:06:03.161" level="INFO">Typing text 'playstation 5' into text field '//input[contains(@type,'text')]'.</msg>
+<status status="PASS" starttime="20230302 13:06:03.160" endtime="20230302 13:06:03.404"/>
+</kw>
+<status status="PASS" starttime="20230302 13:06:03.159" endtime="20230302 13:06:03.405"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="amazon_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BOTAO_PESQUISAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230302 13:06:03.410" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
+<status status="PASS" starttime="20230302 13:06:03.408" endtime="20230302 13:06:05.759"/>
+</kw>
+<status status="PASS" starttime="20230302 13:06:03.408" endtime="20230302 13:06:05.759"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se esta listando o produto pesquisado" library="amazon_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RESULTADO_CONSOLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230302 13:06:05.761" endtime="20230302 13:06:05.803"/>
+</kw>
+<status status="PASS" starttime="20230302 13:06:05.760" endtime="20230302 13:06:05.803"/>
+</kw>
+<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230302 13:06:05.805" endtime="20230302 13:06:08.127"/>
+</kw>
+<status status="PASS" starttime="20230302 13:06:05.804" endtime="20230302 13:06:08.127"/>
+</kw>
+<doc>Esse teste verifica a busca do produto Xbox Series X</doc>
+<tag>Busca_Produtos</tag>
+<status status="PASS" starttime="20230302 13:05:59.597" endtime="20230302 13:06:08.128"/>
+</test>
+<status status="PASS" starttime="20230302 13:05:59.245" endtime="20230302 13:06:08.130"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Busca_Produtos</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230302 13:05:59.224" level="ERROR">Error in file 'c:\Users\luis.r.bizinelli\Documents\Projetos_publicos\formação Robot\Robot_framework_practice\WebTest\tests\amazon_testes.robot' on line 2: Non-existing setting ''.</msg>
+</errors>
+</robot>
